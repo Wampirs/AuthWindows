@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AuthWindows": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false
+    }
+  }
+}

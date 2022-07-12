@@ -1,0 +1,25 @@
+﻿<Window x:Class="AuthWindows.Steam.Steam"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AuthWindows.Steam"
+        mc:Ignorable="d"
+        x:Name="SteamWindow"
+        Title="Вход в Steam" Height="325" Width="480" ResizeMode="NoResize" WindowStyle="None">
+        <Border Background="{StaticResource BackgroundBorderBrush}">
+            <Grid Background="{StaticResource MainBackgroundBrush}" Margin="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="{StaticResource TopBarBorderBrush}" MouseDown="Grid_MouseDown" >
+                <TextBlock Text="{Binding Title, ElementName=SteamWindow}" Height="20" Width="auto" Margin="10 5 0 25"
+                           Foreground="White" Opacity="0.83"
+                           FontSize="11.6"/>
+                </Grid>
+            </Grid>
+            
+        </Border>
+
+</Window>

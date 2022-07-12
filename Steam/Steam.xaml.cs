@@ -10,25 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace AuthWindows
+namespace AuthWindows.Steam
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для Steam.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Steam : Window
     {
-        public MainWindow()
+        public Steam()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Steam.Steam steam = new Steam.Steam();
-            steam.Show();
+            DragMove();
         }
     }
 }
