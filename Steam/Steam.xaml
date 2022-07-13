@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AuthWindows.Steam"
+        xmlns:uc="clr-namespace:AuthWindows.Steam.Resources.Controls"
         mc:Ignorable="d"
         x:Name="SteamWindow"
         Title="Вход в Steam" Height="325" Width="480" ResizeMode="NoResize" WindowStyle="None">
@@ -14,9 +15,18 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
             <Grid Grid.Row="0" Background="{StaticResource TopBarBorderBrush}" MouseDown="Grid_MouseDown" >
-                <TextBlock Text="{Binding Title, ElementName=SteamWindow}" Height="20" Width="auto" Margin="10 5 0 25"
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="7"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="{Binding Title, ElementName=SteamWindow}" Grid.Row="1" Height="20" Width="auto" Margin="10 0 0 0"
                            Foreground="White" Opacity="0.83"
                            FontSize="11.6"/>
+                <StackPanel Grid.Row="1" HorizontalAlignment="Right" Orientation="Horizontal" Margin="0 0 10 0">
+                    <uc:TopBarButton SourceImage="Resources/Images/Minimize.png" Margin="0 0 0 1"/>
+                    <uc:TopBarButton SourceImage="Resources/Images/Close.png" Height="9" Width="9"/>
+                </StackPanel>
                 </Grid>
             </Grid>
             

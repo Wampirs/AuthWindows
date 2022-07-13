@@ -7,4 +7,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Steam\Resources\Images\Close.png" />
+    <None Remove="Steam\Resources\Images\Minimize.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Steam\Resources\Images\Close.png" />
+    <Resource Include="Steam\Resources\Images\Minimize.png" />
+  </ItemGroup>
+
 </Project>
